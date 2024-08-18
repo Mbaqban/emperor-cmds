@@ -44,10 +44,11 @@ boot > grub > kernel > initrd > systemd : proc-1
 
 
 ps aux
-pd -eo pid,ppid,cmd
+ps -eo pid,ppid,cmd
 ps aux | grep chrome
+pstree
 
-systemcalss -> search shavad
+systemcalls -> search shavad
 
 deamon
 
@@ -62,5 +63,4 @@ dpkg -L nginx
 
 kernel
 
-
-createuser su passwd gp-> ids permisions rwx -> ps kill htop ind grep parent -> unit files. 
+createuser su passwd gp-> ids permisions rwx -> ps kill htop id grep parent -> unit files.
