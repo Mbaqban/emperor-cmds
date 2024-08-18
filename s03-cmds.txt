@@ -1,0 +1,66 @@
+id   > 1000 userhuman 
+id < 1000 system
+
+useradd -ms /bin/bash felan
+
+adduser sath bala tar
+
+
+usermod -aG SUDO mbaqban
+passwd *user*
+
+cat /etc/shadow
+
+man (1) command
+man (5) file
+man (3) lib and command
+
+adduser felan 
+
+cat /etc/group
+
+chmod u+x /felan/felan
+chmod g-x /felan/felan
+chmod o+x /felan/felan
+
+chown -R mbaqban:mbaqban felan/felan
+
+type -a ls
+
+source .bashrc
+source .zshrc
+unix:sock
+
+man -K experssion 
+
+crontab -l    | per user 
+crontab -e
+
+
+libgen.is
+
+
+boot > grub > kernel > initrd > systemd : proc-1 
+
+
+ps aux
+pd -eo pid,ppid,cmd
+ps aux | grep chrome
+
+systemcalss -> search shavad
+
+deamon
+
+lib/systemd/system
+
+systemctl
+sournalctl
+
+type -a nginx
+dpkg -S /usr/sbin/nginx
+dpkg -L nginx
+
+kernel
+
+
+createuser su passwd gp-> ids permisions rwx -> ps kill htop ind grep parent -> unit files. 

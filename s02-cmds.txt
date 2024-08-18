@@ -1,0 +1,21 @@
+ls -ltrh
+
+d 755
+f 644
+
+-p /gol/bolbol
+sudo su -
+
+getent passwd username
+
+
+apt remove --purge felan
+
+apt-cache policy felan
+
+wc -l -w -c
+*find /etc/ -type f -size 0 -iname "*.log" -mtime +1
+grep fela.txt aroom --color=auto
+cat txt | sort | uniq | wc 
+cat txt | grep a | wc
+*tee
