@@ -55,7 +55,7 @@ deamon
 lib/systemd/system
 
 systemctl
-sournalctl
+journalctl
 
 type -a nginx
 dpkg -S /usr/sbin/nginx

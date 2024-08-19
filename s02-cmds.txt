@@ -19,3 +19,4 @@ grep fela.txt aroom --color=auto
 cat txt | sort | uniq | wc 
 cat txt | grep a | wc
 *tee
+

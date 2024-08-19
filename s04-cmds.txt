@@ -1,0 +1,63 @@
+pkexec for root pass -> etc/sudoers
+
+visudo -> for change the sudoer file
+
+review last session
+
+awk '{ print $1,$NF }'  data.txt first coul
+awk '{ print NR,$0 }'  data.txt line numbers
+awk '{ print $NF }'  data.txt last coul
+
+awk 'NR==3,NR==6 { print NR,$0 }'  data.txt
+
+sed 's/unix/linux/g' linux.txt
+sed -i.bak   
+
+nano -B
+
+cut -d ' ' -f 1-2,4 data.txt
+ln -s 
+
+ln 
+
+uname -a
+hostname
+top -> load avrage is important - htop - bytop
+df - df data.txt -
+du -hd1 
+free -h RAM
+uptime
+whoami
+who
+w
+last
+sudo fdisk -l
+which
+whereis
+
+gzip -c
+
+tar -czvf filename path
+tar -xzvf filename path
+
+test=test
+echo $test
+
+export test=1
+
+PATH SHELL HOME USER PWD
+
+.bashrc
+/etc/bash.bashrc
+
+source .bashrc
+
+printenv || env
+
+-exec 
+
+sudo mkdir -p /backup/logs
+sudo find /var/log/*.log -size +1M -mtime +7 -exec cp {} /backup/logs \;
+sudo find /var/log -user mbaqban -exec du -shc {} \; | tail -n 1           # not sure            
+
+
