@@ -1,0 +1,9 @@
+ls /dev
+
+fdisk -l
+
+m
+n
+t
+mkfs
+

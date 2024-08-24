@@ -58,6 +58,6 @@ printenv || env
 
 sudo mkdir -p /backup/logs
 sudo find /var/log/*.log -size +1M -mtime +7 -exec cp {} /backup/logs \;
-sudo find /var/log -user mbaqban -exec du -shc {} \; | tail -n 1           # not sure            
+sudo find /var/log -- prune -user mbaqban -exec du -shc {} \; | tail -n 1           # not sure            
 
 
