@@ -1,0 +1,33 @@
+s06 - network 
+
+ycp/ip model
+network layer is importnant 
+
+apt install net-tools
+ifconfig
+
+ss -tunlp
+ip addr add 192.168.1.100 dev "ensp08"
+ip addrset "interface" up
+ip link set "interface" up
+
+ping 
+traceroute
+mtr
+dig @1.1.1.1
+arp
+telnet 192.168.1.1 22
+nslookup google.com
+nstat
+curl
+whois 
+tcpdump
+tshark
+nmap -A google.com
+nmcli
+iw
+ssh
+scp
+dhclient 
+nft
+
