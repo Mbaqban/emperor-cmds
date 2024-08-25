@@ -31,3 +31,68 @@ scp
 dhclient 
 nft
 
+___________________________________________________________________________
+netcmd.txt | mr fattahi
+___________________________________________________________________________
+ping
+traceroute
+mtr
+dig
+arp
+telnet
+nslookup
+netstat
+host
+ss
+curl
+wget
+whois
+iftop
+tcpdump
+nmap
+nmcli
+iw
+ssh
+scp
+dhclient
+ifconfig
+
+------------------
+Basic Firewall Configuration
+sudo nft add table inet filter
+sudo nft add chain inet filter input { type filter hook input priority 0 \; policy drop \; }
+sudo nft add rule inet filter input iif "lo" accept
+sudo nft add rule inet filter input tcp dport 22 accept
+
+Network Address Translation (NAT)
+sudo nft add table ip nat
+sudo nft add chain ip nat postrouting { type nat hook postrouting priority 100 \; }
+sudo nft add rule ip nat postrouting ip saddr 192.168.1.0/24 oif "eth0" masquerade
+
+Port Forwarding
+sudo nft add table ip nat
+sudo nft add chain ip nat prerouting { type nat hook prerouting priority 0 \; }
+sudo nft add rule ip nat prerouting tcp dport 8080 dnat to 192.168.1.100:80
+
+Blocking Specific IP Addresses
+sudo nft add table inet filter
+sudo nft add chain inet filter input { type filter hook input priority 0 \; policy accept \; }
+sudo nft add rule inet filter input ip saddr 203.0.113.50 drop
+
+
+ sudo nft add table inet inet-table
+ sudo nft add chain inet inet-table output-filter-chain '{ type filter hook output priority 0; }'
+ sudo nft add rule inet inet-table output-filter-chain ip daddr 8.8.8.8 counter
+ sudo nft list table inet inet-table
+  ping -c 1 8.8.8.8
+
+
+---------
+
+ip link show
+ip addr show
+ip link set eth0 up
+ip addr add 192.168.1.100/24 dev eth0
+ip route show
+ip route add 10.0.0.0/24 via 192.168.1.254 dev eth0
+
