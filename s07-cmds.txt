@@ -1,0 +1,47 @@
+/var/log
+
+journalctl -> /var/log/journal
+
+systemctl status systemd-journald
+#
+
+journald -S since "Jul 15 11:09:15"
+journald -U until "Jul 15 11:09:15"
+
+journald -u unit
+
+dmesg logs produced by kernel
+
+dmesg
+OR
+journalctl -k or --dmesg
+journalctl --list-boots | boots list
+
+-p or --priority
+0: emerg
+1: alert
+2: crit
+3: err
+4: warning
+5: notice
+6: info
+7: debug
+
+journalctl -n OR lines 
+journalctl -f
+journalctl -o json OR json-pretty
+
+journalctl --grep
+journalctl --case-sensitive=false
+
+journalctl --facility=help
+journalctl --facility=auth,authpriv
+apt show htop
+
+
+man systemd.journal-fields
+journalctl --fields llist of them
+sudo journalctl -F _PID=1000
+
+journalctl --disk-usage
+journalctl --vacuum-{size,time}
